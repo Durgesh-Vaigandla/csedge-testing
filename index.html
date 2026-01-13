@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<!--
+  Generated with CSEdge Portfolio Builder
+  https://csedge.co
+  Author: CSEdge - Empowering Developers Worldwide
+  Template: Dev Terminal
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Johnson | Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --text: #ffffff;
+            --accent: #5448F9;
+            --surface: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .terminal-window {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .terminal-header {
+            background: var(--surface);
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+
+        .terminal-title {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        .terminal-content {
+            padding: 2rem;
+        }
+
+        .prompt { color: var(--accent); margin-right: 0.5rem; }
+        .command { font-weight: 600; margin-bottom: 1.5rem; display: block; }
+        
+        .section { margin-bottom: 3rem; }
+        .section-title {
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+            margin-left: 1rem;
+        }
+
+        .bio { margin-bottom: 2rem; opacity: 0.9; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.02);
+            transition: all 0.2s;
+        }
+        .card:hover { border-color: var(--accent); background: rgba(255, 255, 255, 0.05); }
+
+        .tag {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 4px;
+            margin-right: 0.5rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .link { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+        .link:hover { border-bottom-color: var(--accent); }
+
+        .skill-list { display: flex; flex-wrap: wrap; gap: 1rem; }
+        .skill-item { color: var(--accent); }
+        .skill-item::before { content: "> "; }
+
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            .terminal-content { padding: 1rem; }
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: var(--accent);
+            vertical-align: middle;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+            <div class="terminal-title">bash -- alex johnson.sh</div>
+        </div>
+        <div class="terminal-content">
+            <div class="command">
+                <span class="prompt">$</span>whoami
+                <div class="bio">
+                    <h1 style="font-size: 2rem; margin: 1rem 0;">Alex Johnson</h1>
+                    <p>Full-stack developer passionate about building scalable web applications and creating intuitive user experiences. Experienced in React, Node.js, and cloud technologies. Always eager to learn new technologies and contribute to open-source projects.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">CONTACT_INFO</div>
+                <p>EMAIL: <a href="mailto:alex.johnson@example.com" class="link">alex.johnson@example.com</a></p>
+                <p>PHONE: +1 (555) 123-4567</p>
+                <div style="margin-top: 1rem;">
+                    <a href="https://github.com/alexjohnson" target="_blank" class="link">GITHUB</a> 
+                    <a href="https://linkedin.com/in/alexjohnson" target="_blank" class="link">LINKEDIN</a> 
+                    <a href="https://twitter.com/alexjohnson" target="_blank" class="link">TWITTER</a>
+                </div>
+            </div>
+
+            
+            <div class="section">
+                <div class="section-title">SKILLS</div>
+                <div class="skill-list">
+                    <span class="skill-item">React</span><span class="skill-item">TypeScript</span><span class="skill-item">Node.js</span><span class="skill-item">Python</span><span class="skill-item">AWS</span><span class="skill-item">Docker</span><span class="skill-item">PostgreSQL</span><span class="skill-item">MongoDB</span><span class="skill-item">Git</span><span class="skill-item">CI/CD</span>
+                </div>
+            </div>
+            
+
+            
+            <div class="section">
+                <div class="section-title">PROJECTS.exe</div>
+                <div class="grid">
+                    
+                    <div class="card">
+                        <div style="font-weight: 700; margin-bottom: 0.5rem;">E-Commerce Platform</div>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Built a full-stack e-commerce platform with React, Node.js, and PostgreSQL. Implemented payment integration, inventory management, and admin dashboard.</p>
+                        <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">Stripe</span>
+                        <div style="margin-top: 1rem;"><a href="https://example.com/ecommerce" target="_blank" class="link">./run_demo</a></div>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-weight: 700; margin-bottom: 0.5rem;">Task Management App</div>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Developed a collaborative task management application with real-time updates using WebSockets. Features include team collaboration, file attachments, and notifications.</p>
+                        <span class="tag">React</span><span class="tag">WebSocket</span><span class="tag">MongoDB</span><span class="tag">Express</span>
+                        <div style="margin-top: 1rem;"><a href="https://example.com/taskapp" target="_blank" class="link">./run_demo</a></div>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-weight: 700; margin-bottom: 0.5rem;">Weather Dashboard</div>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Created a weather dashboard that aggregates data from multiple APIs and displays interactive charts and forecasts.</p>
+                        <span class="tag">React</span><span class="tag">Chart.js</span><span class="tag">API Integration</span>
+                        <div style="margin-top: 1rem;"><a href="https://example.com/weather" target="_blank" class="link">./run_demo</a></div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            
+            <div class="section">
+                <div class="section-title">HISTORY.log</div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="color: var(--accent); font-weight: 600;">[Jan 2022 - Present]</div>
+                    <div style="font-weight: 700;">Senior Full-Stack Developer @ Tech Innovations Inc.</div>
+                    <p style="font-size: 0.85rem; opacity: 0.7;">Lead development of customer-facing web applications.</p>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="color: var(--accent); font-weight: 600;">[Jun 2020 - Dec 2021]</div>
+                    <div style="font-weight: 700;">Full-Stack Developer @ StartupXYZ</div>
+                    <p style="font-size: 0.85rem; opacity: 0.7;">Developed and maintained multiple client projects.</p>
+                </div>
+                
+            </div>
+            
+            
+            
+            <div class="section">
+                <div class="section-title">EDUCATION.log</div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="color: var(--accent); font-weight: 600;">[Sep 2016 - May 2020]</div>
+                    <div style="font-weight: 700;">Bachelor of Science in Computer Science</div>
+                    <div style="font-size: 0.9rem; opacity: 0.8;">State University (GPA: 3.8/4.0)</div>
+                    <p style="font-size: 0.85rem; opacity: 0.7;">Focused on software engineering and algorithms.</p>
+                </div>
+                
+            </div>
+            
+
+            
+            <div class="section">
+                <div class="section-title">CERTIFICATIONS.log</div>
+                <div class="grid">
+                    
+                    <div class="card">
+                        <div style="font-weight: 700; margin-bottom: 0.5rem;">AWS Certified Solutions Architect</div>
+                        <div style="font-size: 0.8rem; color: var(--accent);">Amazon Web Services &bull; Aug 2023</div>
+                        
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-weight: 700; margin-bottom: 0.5rem;">Professional Scrum Master I</div>
+                        <div style="font-size: 0.8rem; color: var(--accent);">Scrum.org &bull; Mar 2022</div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            
+            <div class="section">
+                <div class="section-title">AWARDS.log</div>
+                <div class="grid">
+                    
+                    <div class="card">
+                        <div style="font-weight: 700; margin-bottom: 0.5rem;">First Place - Global Fintech Hackathon</div>
+                        <div style="font-size: 0.8rem; color: var(--accent);">HSBC & Google Cloud &bull; 2023</div>
+                        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem;">Led a team of 4 to build a sustainable investing platform using AI.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div style="font-weight: 700; margin-bottom: 0.5rem;">Open Source Contributor of the Year</div>
+                        <div style="font-size: 0.8rem; color: var(--accent);">GitHub Community Awards &bull; 2022</div>
+                        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 0.5rem;">Recognized for significant contributions to the React ecosystem.</p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            
+
+            
+            <div class="section">
+                <div class="section-title">LANGUAGES.bin</div>
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                    
+                    <div>
+                        <div style="font-weight: 700; color: var(--accent);">English</div>
+                        <div style="font-size: 0.8rem; opacity: 0.7;">$ echo "Native/Bilingual"</div>
+                    </div>
+                    
+                    <div>
+                        <div style="font-weight: 700; color: var(--accent);">German</div>
+                        <div style="font-size: 0.8rem; opacity: 0.7;">$ echo "Professional Working"</div>
+                    </div>
+                    
+                    <div>
+                        <div style="font-weight: 700; color: var(--accent);">Spanish</div>
+                        <div style="font-size: 0.8rem; opacity: 0.7;">$ echo "Limited Working"</div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            <div>
+                <span class="prompt">$</span><span class="cursor"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    
